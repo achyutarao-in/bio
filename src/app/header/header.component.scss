@@ -1,0 +1,18 @@
+@import "./../../variables.scss";
+.header{
+    a{
+        display: flex;
+        text-decoration: none;
+        color: $white-color;
+        font-weight: 400;
+        transform: rotate(-90deg);
+        margin-top: 50px;
+        font-size: $font-size-small;
+        justify-content: space-evenly;
+    }
+}
+.activeTab{
+    color: $yellow-color !important;
+}
+
+

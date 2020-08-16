@@ -1,0 +1,22 @@
+@import "./../variables.scss";
+.side-nav{
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $background-color;
+    overflow-x: hidden;
+}
+.content{
+    // margin-left: 15%;
+    overflow-y: scroll;
+    height: 100%;
+}
+.content-wrapper{
+   // height: 100%;
+}
+.each-section{
+    // min-height: 80vh;
+}

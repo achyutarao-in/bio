@@ -1,0 +1,41 @@
+@import "./../../variables.scss";
+.customImg{
+    height: 300px;
+    width: 100%;
+}
+.content-wrapper{
+    padding: 20px;
+}
+.title{
+    color: $yellow-color;
+    font-family: $font-family;
+    font-size: $font-size-medium;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+.para{
+    margin-top: 20px;
+    color: $white-color;
+    font-family: $font-family;
+    font-size: $font-size-medium;
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:801px)  { 
+    .text-center, .para{
+        width: 50%;
+        float: left;
+    }
+    .para{
+        margin-top: 0px;
+    }
+    .customImg{
+        width: 80%;
+        height: 400px;
+    }
+    .title{
+        margin-top: 0px;
+    }
+
+}

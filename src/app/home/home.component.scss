@@ -1,0 +1,28 @@
+
+@import "./../../variables.scss";
+.home-content-wrap{
+    // margin-left: 15%;
+    display: block;
+    background: url("./../../assets//images/home2.jpg") no-repeat center center fixed;
+    height:100%;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+}
+.title{
+    font-size: 45px;
+    color: $yellow-color;
+    border-bottom: 0.5px solid $yellow-color;
+    font-family: $font-family;
+
+}
+.text-wrapper{
+    position: absolute;
+    top: 60%;
+    text-align: right;
+    left: 10%;
+}
+.subTitle{
+    color: $white-color;
+    line-height: 2;
+}
