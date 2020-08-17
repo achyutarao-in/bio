@@ -18,5 +18,20 @@
    // height: 100%;
 }
 .each-section{
-    // min-height: 80vh;
+    min-height: 80vh;
+    border-radius: 6px;
+    border-bottom: 2px solid black;
+}
+
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+
+    .left, .right {
+        float: left;
+        width: 20%;
+        padding: 20px;
+    }
+    .centerSection{
+        width: 60%;
+        float: left;
+    }
 }
