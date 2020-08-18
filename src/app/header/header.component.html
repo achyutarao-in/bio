@@ -17,7 +17,7 @@
     <a [ngClass]="{'activeTab': selectedTab === 'family'}" (click)="navigateTo('family')">Family & Friends</a>
 </div> -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,14 +26,21 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li><a [ngClass]="{'activeTab': selectedTab === 'home'}" (click)="navigateTo('home')">Home</a></li>
-            <li><a [ngClass]="{'activeTab': selectedTab === 'earlyLife'}" (click)="navigateTo('earlyLife')">Early
+            <li class="nav-item"><a class="nav-link" [ngClass]="{'activeTab': selectedTab === 'home'}"
+                    (click)="navigateTo('home')">Home</a></li>
+            <li><a class="nav-link" [ngClass]="{'activeTab': selectedTab === 'earlyLife'}"
+                    (click)="navigateTo('earlyLife')">Early
                     Life</a></li>
-            <li> <a [ngClass]="{'activeTab': selectedTab === 'bhs'}" (click)="navigateTo('bhs')">NGO(BS to BHS)</a></li>
-            <li><a [ngClass]="{'activeTab': selectedTab === 'scpcr'}" (click)="navigateTo('scpcr')">SCPCR</a></li>
-            <li><a [ngClass]="{'activeTab': selectedTab === 'citizenAds'}" (click)="navigateTo('citizenAds')">Citizen
+            <li class="nav-item"> <a class="nav-link" [ngClass]="{'activeTab': selectedTab === 'bhs'}"
+                    (click)="navigateTo('bhs')">NGO(BS
+                    to BHS)</a></li>
+            <li class="nav-item"><a class="nav-link" [ngClass]="{'activeTab': selectedTab === 'scpcr'}"
+                    (click)="navigateTo('scpcr')">SCPCR</a></li>
+            <li class="nav-item"><a class="nav-link" [ngClass]="{'activeTab': selectedTab === 'citizenAds'}"
+                    (click)="navigateTo('citizenAds')">Citizen
                     Ads</a></li>
-            <li><a [ngClass]="{'activeTab': selectedTab === 'family'}" (click)="navigateTo('family')">Family &
+            <li class="nav-item"><a class="nav-link" [ngClass]="{'activeTab': selectedTab === 'family'}"
+                    (click)="navigateTo('family')">Family &
                     Friends</a></li>
         </ul>
     </div>

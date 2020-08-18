@@ -18,9 +18,11 @@
    // height: 100%;
 }
 .each-section{
-    min-height: 80vh;
+    // min-height: 80vh;
     border-radius: 6px;
     border-bottom: 2px solid black;
+    height: auto;
+    clear: both;
 }
 
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
