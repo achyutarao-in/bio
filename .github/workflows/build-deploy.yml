@@ -30,10 +30,8 @@ jobs:
           ${{ runner.os }}-
     - name: Install node modules
       run: npm install
-    - name: Install angular cli
-      run: npm install -g @angular/cli  > /dev/null
     - name: Build angular app
-      run: ng build --prod --base-href="https://achyutarao-in.github.io/"
+      run: npm build -- --prod --base-href="https://achyutarao-in.github.io/"
     - name: Add .nojekyll file
       run: touch dist/achyutarao-in.github.io/.nojekyll
     - name: Copy 404 page
