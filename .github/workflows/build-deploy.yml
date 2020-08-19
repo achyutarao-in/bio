@@ -22,6 +22,8 @@ jobs:
          npm install -g @angular/cli
          npm install
          ng build --prod --base-href="https://achyutarao-in.github.io/"
+         touch dist/achyutarao-in.github.io/.nojekyll
+         cp src/404.html dist/achyutarao-in.github.io/404.html
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
