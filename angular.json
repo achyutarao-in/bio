@@ -25,7 +25,11 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/admin",
+              "src/404.html",
+              ".nojekyll",
+              "CNAME"
             ],
             "styles": [
               "src/assets/fonts/opensans-fonts.scss",
