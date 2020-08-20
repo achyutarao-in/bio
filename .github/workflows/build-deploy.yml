@@ -33,17 +33,16 @@ jobs:
     - name: Install angular cli
       run: npm install -g @angular/cli  > /dev/null
     - name: Build angular app
-      run: ng build --prod --base-href="https://achyutarao-in.github.io/"
+      run: ng build --prod --base-href="https://www.achyutarao.in/"
     - name: Add .nojekyll file
-      run: touch dist/achyutarao-in.github.io/.nojekyll
+      run: touch dist/www.achyutarao.in/.nojekyll
     - name: Copy 404 page
-      run: cp src/404.html dist/achyutarao-in.github.io/404.html
+      run: cp src/404.html dist/www.achyutarao.in/404.html
     - name: Copy cname file
-      continue-on-error: true
-      run: cp CNAME dist/achyutarao-in.github.io/CNAME
+      run: cp CNAME dist/www.achyutarao.in/CNAME
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: dist/achyutarao-in.github.io
+        FOLDER: dist/www.achyutarao.in
