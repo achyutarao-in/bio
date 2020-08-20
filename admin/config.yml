@@ -2,7 +2,7 @@ backend:
   name: github
   branch: master
   repo: achyutarao-in/achyutarao-in-content
-  base-url: https://us-central1-achyutarao-in.cloudfunctions.net/github-oauth-client
+  base_url: https://us-central1-achyutarao-in.cloudfunctions.net/github-oauth-client
 
 media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
 public_folder: 'assets/images/uploads'
