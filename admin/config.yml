@@ -2,29 +2,33 @@ backend:
   name: github
   branch: master
   repo: achyutarao-in/achyutarao-in-content
-  base_url: https://achyutao-in-oauth-server.glitch.me/
+  base_url: https://achyutarao-in-oauth-server.glitch.me/
 
 media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
 public_folder: 'assets/images/uploads'
 publish_mode: editorial_workflow
 
-collections: # A list of collections the CMS should be able to edit
-  - name: 'blog' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Blog' # Used in the UI, ie.: "New Post"
-    folder: 'blog' # (src/assets/blog) The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: 'Title', name: 'title', widget: 'string', required: false }
-      - {
-          label: 'Description',
-          name: 'description',
-          widget: 'text',
-          required: false,
-        }
-      - {
-          label: 'Publish',
-          name: 'publish',
-          widget: 'boolean',
-          required: false,
-        }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+collections: 
+  - name: landing
+    label: Landing Page
+    files: 
+      - label: Text Bits
+        name: text_bits
+        file: src/content/landing/text_bits.json
+        fields:
+          - label: BHS Section
+            name: bhs
+            widget: list
+            field: {label: Para, name: para, widget: text}
+          - label: Early Life Section
+            name: earlylife
+            widget: list
+            field: {label: Para, name: para, widget: text}
+          - label: Citizen Ads Section
+            name: citizenads
+            widget: list
+            field: {label: Para, name: para, widget: text}
+          - label: Family and Friends Section
+            name: family
+            widget: list
+            field: {label: Para, name: para, widget: text}
