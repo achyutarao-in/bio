@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: master
-  repo: achyutarao-in/achyutarao-in-content
+  repo: achyutarao-in/achyutarao-in.github.io
   base_url: https://achyutarao-in-oauth-server.glitch.me/
 
 media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
