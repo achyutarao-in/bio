@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as content from '../../content/landing/text_bits.json';
 
 @Component({
   selector: 'app-bhs',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BhsComponent implements OnInit {
 
+  paras: string[] = content.bhs;
   constructor() { }
 
   ngOnInit() {

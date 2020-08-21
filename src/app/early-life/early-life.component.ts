@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as content from '../../content/landing/text_bits.json';
 
 @Component({
   selector: 'app-early-life',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EarlyLifeComponent implements OnInit {
 
+  paras: string[] = content.earlylife;
   constructor() { }
 
   ngOnInit() {

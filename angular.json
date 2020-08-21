@@ -27,6 +27,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/admin",
+              "src/content",
               "src/404.html",
               "src/.nojekyll",
               "src/CNAME"
