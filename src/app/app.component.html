@@ -1,4 +1,5 @@
 <div>
+<div>
   <app-header (tabSelection)="navigateToTab($event)"></app-header>
 </div>
 <div class="content" id="parent" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
@@ -20,13 +21,6 @@
     </div>
     <div class="left"></div>
   </div>
-  <div id="scpcr" class="each-section">
-    <div class="left"></div>
-    <div class="centerSection">
-      <app-scpcr></app-scpcr>
-    </div>
-    <div class="left"></div>
-  </div>
   <div id="citizenAds" class="each-section">
     <div class="left"></div>
     <div class="centerSection">
@@ -42,5 +36,9 @@
     </div>
     <div class="left"></div>
   </div>
+</div>
+<footer class="footer">
+<p>This site is developed by Friends and Family <a href="https://www.github.com/achyutarao-in/">View Source at Github</a></p>
+</footer>
 </div>
 <router-outlet></router-outlet>

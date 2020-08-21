@@ -30,7 +30,13 @@
               "src/content",
               "src/404.html",
               "src/.nojekyll",
-              "src/CNAME"
+              "src/CNAME",
+              "src/favicon-16x16.png",
+              "src/favicon-16x16.png",
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/apple-touch-icon.png",
+              "src/site.webmanifest"
             ],
             "styles": [
               "src/assets/fonts/opensans-fonts.scss",
@@ -38,7 +44,8 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/marked/lib/marked.js"
             ]
           },
           "configurations": {

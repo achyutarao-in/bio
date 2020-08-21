@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import * as content from '../../content/landing/text_bits.json';
+import * as content from '../../content/landing/bhs.json';
+
+interface IContent {
+  title: string;
+  sections: ({image: string; text: string})[];
+}
 
 @Component({
   selector: 'app-bhs',
@@ -8,7 +13,7 @@ import * as content from '../../content/landing/text_bits.json';
 })
 export class BhsComponent implements OnInit {
 
-  paras: string[] = content.bhs;
+  content: IContent = (content as any).default;
   constructor() { }
 
   ngOnInit() {

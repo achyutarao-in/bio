@@ -11,6 +11,7 @@ import { EarlyLifeComponent } from './early-life/early-life.component';
 import { ScpcrComponent } from './scpcr/scpcr.component';
 import { CitizenAdsComponent } from './citizen-ads/citizen-ads.component';
 import { FamilyFriendsComponent } from './family-friends/family-friends.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FamilyFriendsComponent } from './family-friends/family-friends.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
