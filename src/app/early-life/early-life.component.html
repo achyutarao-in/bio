@@ -1,9 +1,9 @@
-<div class="content-wrapper centerSection">
-    <div class="text-center">
-        <img src="./../../assets/images/earlylife.jpg" class="rounded customImg" alt="...">
-    </div>
-    <h3 class="title">Early Life</h3>
-    <p class="para" *ngFor="let para of paras;let i = index">
-        {{para}}
-    </p>
+<div class="content-wrapper">
+    <h3 class="title">{{content.title}}</h3>
+    <ng-template let-section ngFor [ngForOf]="content.sections">
+            <div *ngIf="section.image!==undefined" class="text-center">
+                <img src="{{section.image}}" class="rounded customImg" alt="...">
+            </div>
+        <p class="para text-justified">{{section.text}}</p>
+    </ng-template>
 </div>

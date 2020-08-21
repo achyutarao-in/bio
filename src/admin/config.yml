@@ -4,6 +4,13 @@ backend:
   repo: achyutarao-in/achyutarao-in.github.io
   base_url: https://achyutarao-in-oauth-server.glitch.me/
 
+# For local development, uncomment following line and run `npx netlify-cms-proxy-server`
+# local_backend: true
+
+site_url: https://www.achyutarao.in
+display_url: https://www.achyutarao.in
+logo_url: https://www.achyutarao.in/assets/images/home.png
+
 media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
 public_folder: 'assets/images/uploads'
 publish_mode: editorial_workflow
@@ -12,23 +19,81 @@ collections:
   - name: landing
     label: Landing Page
     files: 
-      - label: Text Bits
-        name: text_bits
-        file: src/content/landing/text_bits.json
-        fields:
-          - label: BHS Section
-            name: bhs
-            widget: list
-            field: {label: Para, name: para, widget: text}
-          - label: Early Life Section
-            name: earlylife
-            widget: list
-            field: {label: Para, name: para, widget: text}
-          - label: Citizen Ads Section
-            name: citizenads
-            widget: list
-            field: {label: Para, name: para, widget: text}
-          - label: Family and Friends Section
-            name: family
-            widget: list
-            field: {label: Para, name: para, widget: text}
+      - label: Early Life Section
+        name: earlylife
+        widget: object
+        collapsed: false
+        file: 'src/content/landing/earlylife.json'
+        fields: 
+        - {label: Title, name: title, widget: string}
+        - label: Sections
+          name: sections
+          summary: '{{fields.text}} - {{fields.image}}'
+          widget: list
+          fields:
+            - label: Image
+              name: image
+              widget: image
+              required: false
+            - label: Text
+              name: text
+              widget: text
+      - label: Balala Hakkula Sangham Section
+        name: bhs
+        widget: object
+        collapsed: false
+        file: 'src/content/landing/bhs.json'
+        fields: 
+        - {label: Title, name: title, widget: string}
+        - label: Sections
+          name: sections
+          widget: list
+          summary: '{{fields.text}} - {{fields.image}}'
+          fields:
+            - label: Image
+              name: image
+              widget: image
+              required: false
+            - label: Text
+              name: text
+              widget: text
+      - label: Citizen Ads Section
+        name: citizenads
+        widget: object
+        collapsed: false
+        file: 'src/content/landing/citizenads.json'
+        fields: 
+        - {label: Title, name: title, widget: string}
+        - label: Sections
+          name: sections
+          widget: list
+          summary: '{{fields.text}} - {{fields.image}}'
+          fields:
+            - label: Image
+              name: image
+              widget: image
+              required: false
+            - label: Text
+              name: text
+              widget: text
+      - label: Friends and Family Secion
+        name: family
+        widget: object
+        collapsed: false
+        file: 'src/content/landing/family.json'
+        fields: 
+        - {label: Title, name: title, widget: string}
+        - label: Sections
+          name: sections
+          widget: list
+          summary: '{{fields.text}} - {{fields.image}}'
+          fields:
+            - label: Image
+              name: image
+              widget: image
+              required: false
+            - label: Text
+              name: text
+              widget: text
+
+          
