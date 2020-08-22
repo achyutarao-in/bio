@@ -5,11 +5,11 @@ backend:
   base_url: https://achyutarao-in-oauth-server.glitch.me/
 
 # For local development, uncomment following line and run `npx netlify-cms-proxy-server`
-# local_backend: true
+local_backend: true
 
 site_url: https://www.achyutarao.in
 display_url: https://www.achyutarao.in
-logo_url: https://www.achyutarao.in/assets/images/home.png
+logo_url: https://www.achyutarao.in/android-chrome-512x512.png
 
 media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
 public_folder: 'assets/images/uploads'
@@ -26,16 +26,18 @@ collections:
         file: 'src/content/landing/earlylife.json'
         fields: 
         - {label: Title, name: title, widget: string}
-        - label: Sections
-          name: sections
-          summary: '{{fields.text}} - {{fields.image}}'
+        - label: Images
+          name: images
           widget: list
-          fields:
-            - label: Image
+          field:
+              label: Image
               name: image
               widget: image
-              required: false
-            - label: Text
+        - label: Paras
+          name: paras
+          widget: list
+          field:
+              label: Text
               name: text
               widget: text
       - label: Balala Hakkula Sangham Section
@@ -45,16 +47,18 @@ collections:
         file: 'src/content/landing/bhs.json'
         fields: 
         - {label: Title, name: title, widget: string}
-        - label: Sections
-          name: sections
+        - label: Images
+          name: images
           widget: list
-          summary: '{{fields.text}} - {{fields.image}}'
-          fields:
-            - label: Image
+          field:
+              label: Image
               name: image
               widget: image
-              required: false
-            - label: Text
+        - label: Paras
+          name: paras
+          widget: list
+          field:
+              label: Text
               name: text
               widget: text
       - label: Citizen Ads Section
@@ -64,16 +68,18 @@ collections:
         file: 'src/content/landing/citizenads.json'
         fields: 
         - {label: Title, name: title, widget: string}
-        - label: Sections
-          name: sections
+        - label: Images
+          name: images
           widget: list
-          summary: '{{fields.text}} - {{fields.image}}'
-          fields:
-            - label: Image
+          field:
+              label: Image
               name: image
               widget: image
-              required: false
-            - label: Text
+        - label: Paras
+          name: paras
+          widget: list
+          field:
+              label: Text
               name: text
               widget: text
       - label: Friends and Family Secion
@@ -83,16 +89,18 @@ collections:
         file: 'src/content/landing/family.json'
         fields: 
         - {label: Title, name: title, widget: string}
-        - label: Sections
-          name: sections
+        - label: Images
+          name: images
           widget: list
-          summary: '{{fields.text}} - {{fields.image}}'
-          fields:
-            - label: Image
+          field:
+              label: Image
               name: image
               widget: image
-              required: false
-            - label: Text
+        - label: Paras
+          name: paras
+          widget: list
+          field:
+              label: Text
               name: text
               widget: text
 
