@@ -18,6 +18,7 @@
     color: $white-color;
     font-family: $font-family;
     font-size: $font-size-medium;
+    text-align: justify;
 }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */ 
@@ -25,13 +26,16 @@
     .text-center{
         width: 50%;
         float: left;
+        margin-right: 10px;
     }
     .para{
         margin-top: 0px;
+        text-align: justify;
     }
     .customImg{
-        width: 80%;
-        height: 400px;
+        // width: 80%;
+        // height: 400px;
+        width: 100%;
     }
     .title{
         margin-top: 0px;
