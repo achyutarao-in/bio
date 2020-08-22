@@ -13,7 +13,6 @@ logo_url: https://www.achyutarao.in/android-chrome-512x512.png
 
 media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
 public_folder: 'assets/images/uploads'
-publish_mode: editorial_workflow
 
 collections: 
   - name: landing
