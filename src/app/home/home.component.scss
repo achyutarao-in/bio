@@ -3,7 +3,10 @@
 .home-content-wrap{
     // margin-left: 15%;
     display: block;
-    background: url("/assets/images/home.png") no-repeat center center fixed;
+    background-image: url("/assets/images/home.png");
+    background-repeat:no-repeat;
+    background-attachment: initial; 
+    background-position:center center;
     height:100%;
     box-sizing: border-box;
     position: relative;
