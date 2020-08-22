@@ -5,7 +5,7 @@ backend:
   base_url: https://achyutarao-in-oauth-server.glitch.me/
 
 # For local development, uncomment following line and run `npx netlify-cms-proxy-server`
-# local_backend: true
+local_backend: true
 
 site_url: https://www.achyutarao.in
 display_url: https://www.achyutarao.in
