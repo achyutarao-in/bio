@@ -3,7 +3,8 @@ import * as content from '../../content/landing/earlylife.json';
 
 interface IContent {
   title: string;
-  sections: ({image: string; text: string})[];
+  paras: string[];
+  images: string[];
 }
 
 @Component({
