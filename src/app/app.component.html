@@ -1,7 +1,7 @@
 <div>
   <app-header (tabSelection)="navigateToTab($event)"></app-header>
 </div>
-<div class="content" id="parent" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+<div id="parent" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
   <div id="home" class="content-wrapper">
     <app-home></app-home>
   </div>
