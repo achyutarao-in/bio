@@ -35,9 +35,11 @@
     </div>
     <div class="left"></div>
   </div>
+  <div id="gallery" class="each-section" style="text-align: center;">
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+  </div>
 </div>
 <!-- <footer class="footer">
 <p>This site is developed by Friends and Family <a href="https://www.github.com/achyutarao-in/">View Source at Github</a></p>
 </footer> -->
-
 <router-outlet></router-outlet>

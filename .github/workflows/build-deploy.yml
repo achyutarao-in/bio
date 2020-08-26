@@ -1,42 +1,47 @@
 name: Angular Build and Deploy to GitHub Pages
 
 on:
-  push: 
-    branches:   
+  push:
+    branches:
       - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-    - name: Use Node.js 10.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Cache node modules
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
-    - name: Install node modules
-      run: npm install
-    - name: Install angular cli
-      run: npm install -g @angular/cli  > /dev/null
-    - name: Build angular app
-      run: ng build --prod --base-href="https://www.achyutarao.in/"
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@3.5.9
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist/www.achyutarao.in
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ env.cache-name }}-
+      - name: Install node modules
+        run: npm install
+      - name: Cache build folder
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-build-folder
+        with:
+          path: ~/.npm
+          key: ${{ env.cache-name }}-${{ hashFiles('dist/www.achyutarao.in/*') }}
+          restore-keys: |
+            ${{ env.cache-name }}-
+      - name: Build angular app
+        run: npm build -- --prod --base-href='https://www.achyutarao.in/'
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist/www.achyutarao.in
