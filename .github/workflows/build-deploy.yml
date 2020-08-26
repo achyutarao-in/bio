@@ -38,7 +38,7 @@ jobs:
           restore-keys: |
             ${{ env.cache-name }}-
       - name: Build angular app
-        run: npm build -- --prod --base-href='https://www.achyutarao.in/'
+        run: npm run-script build -- --prod --base-href='https://www.achyutarao.in/'
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
