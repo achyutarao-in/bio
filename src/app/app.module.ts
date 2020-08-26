@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,15 @@ import { ScpcrComponent } from './scpcr/scpcr.component';
 import { CitizenAdsComponent } from './citizen-ads/citizen-ads.component';
 import { FamilyFriendsComponent } from './family-friends/family-friends.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { NgxGalleryModule } from 'ngx-gallery';
+
+
+export class CustomHammerConfig extends HammerGestureConfig {
+  overrides = {
+    pinch: { enable: false },
+    rotate: { enable: false }
+  };
+}
 
 @NgModule({
   declarations: [
@@ -28,9 +37,12 @@ import { MarkdownModule } from 'ngx-markdown';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    NgxGalleryModule
   ],
-  providers: [],
+  providers: [
+    { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

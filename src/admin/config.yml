@@ -11,31 +11,31 @@ site_url: https://www.achyutarao.in
 display_url: https://www.achyutarao.in
 logo_url: https://www.achyutarao.in/android-chrome-512x512.png
 
-media_folder: 'src/assets/images/uploads' # Folder where user uploaded files should go
-public_folder: 'assets/images/uploads'
+media_folder: "src/assets/images/uploads" # Folder where user uploaded files should go
+public_folder: "assets/images/uploads"
 
-collections: 
+collections:
   - name: landing
     label: Landing Page
-    files: 
+    files:
       - label: Early Life Section
         name: earlylife
         widget: object
         collapsed: false
-        file: 'src/content/landing/earlylife.json'
-        fields: 
-        - {label: Title, name: title, widget: string}
-        - label: Images
-          name: images
-          widget: list
-          field:
+        file: "src/content/landing/earlylife.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Images
+            name: images
+            widget: list
+            field:
               label: Image
               name: image
               widget: image
-        - label: Paras
-          name: paras
-          widget: list
-          field:
+          - label: Paras
+            name: paras
+            widget: list
+            field:
               label: Text
               name: text
               widget: text
@@ -43,20 +43,20 @@ collections:
         name: bhs
         widget: object
         collapsed: false
-        file: 'src/content/landing/bhs.json'
-        fields: 
-        - {label: Title, name: title, widget: string}
-        - label: Images
-          name: images
-          widget: list
-          field:
+        file: "src/content/landing/bhs.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Images
+            name: images
+            widget: list
+            field:
               label: Image
               name: image
               widget: image
-        - label: Paras
-          name: paras
-          widget: list
-          field:
+          - label: Paras
+            name: paras
+            widget: list
+            field:
               label: Text
               name: text
               widget: text
@@ -64,20 +64,20 @@ collections:
         name: citizenads
         widget: object
         collapsed: false
-        file: 'src/content/landing/citizenads.json'
-        fields: 
-        - {label: Title, name: title, widget: string}
-        - label: Images
-          name: images
-          widget: list
-          field:
+        file: "src/content/landing/citizenads.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Images
+            name: images
+            widget: list
+            field:
               label: Image
               name: image
               widget: image
-        - label: Paras
-          name: paras
-          widget: list
-          field:
+          - label: Paras
+            name: paras
+            widget: list
+            field:
               label: Text
               name: text
               widget: text
@@ -85,22 +85,30 @@ collections:
         name: family
         widget: object
         collapsed: false
-        file: 'src/content/landing/family.json'
-        fields: 
-        - {label: Title, name: title, widget: string}
-        - label: Images
-          name: images
-          widget: list
-          field:
+        file: "src/content/landing/family.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Images
+            name: images
+            widget: list
+            field:
               label: Image
               name: image
               widget: image
-        - label: Paras
-          name: paras
-          widget: list
-          field:
+          - label: Paras
+            name: paras
+            widget: list
+            field:
               label: Text
               name: text
               widget: text
-
-          
+      - label: "Gallery"
+        name: "gallery"
+        summary: "{{fields.image}}"
+        file: "src/content/landing/gallery.json"
+        fields:
+          - label: "Gallery Images"
+            name: "galleryImages"
+            widget: "list"
+            summary: "{{fields.image}}"
+            field: { label: Image, name: image, widget: image }
