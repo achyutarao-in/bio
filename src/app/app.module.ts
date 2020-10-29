@@ -1,5 +1,5 @@
 import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,10 +11,10 @@ import { EarlyLifeComponent } from './early-life/early-life.component';
 import { ScpcrComponent } from './scpcr/scpcr.component';
 import { CitizenAdsComponent } from './citizen-ads/citizen-ads.component';
 import { FamilyFriendsComponent } from './family-friends/family-friends.component';
-import { MarkdownModule } from 'ngx-markdown';
 import { NgxGalleryModule } from 'ngx-gallery';
 
 
+@Injectable()
 export class CustomHammerConfig extends HammerGestureConfig {
   overrides = {
     pinch: { enable: false },
@@ -37,7 +37,6 @@ export class CustomHammerConfig extends HammerGestureConfig {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MarkdownModule.forRoot(),
     NgxGalleryModule
   ],
   providers: [
